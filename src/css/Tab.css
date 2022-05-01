@@ -1,0 +1,23 @@
+.login_tab_wrap {
+    display: inline-block;
+    margin: 15px 0;
+}
+.login_tab_wrap div {
+    cursor: pointer;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    width: 230px;
+    color: #707070;
+    font-size: 16px;
+    padding: 10px 0;
+}
+.front {
+    border: 1px solid #ef3e42;
+    border-bottom: none;
+}
+.back {
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #ef3e42;
+    background-color: #f9f9f9;
+}
