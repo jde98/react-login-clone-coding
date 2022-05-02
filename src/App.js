@@ -6,7 +6,9 @@ import Header from './componet/Header';
 function App() {
   return (
     <main>
+      <Header/>
       <div className='box_back'>
+        
         <Tab></Tab>
         <Box></Box>
       </div>

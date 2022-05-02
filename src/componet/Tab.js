@@ -3,21 +3,25 @@ import '../css/Tab.css'
 
 function Tab(props) {
 
-    const loginTabClick = () => {
+    const loginTabClick = (first) => {
+        const array = ['tabMember', 'tabNonMember'];
 
-        const tabId = ['tabMember', 'tabNonMember'];
-
-        tabId.forEach((item, index)=>{
-            document.getElementById(item).classList.toggle("back");
-            document.getElementById(item).classList.toggle("front");
+        array.forEach(item => {
+            if(item == first){
+                document.getElementById(item).classList.add("front");
+                document.getElementById(item).classList.remove("back");
+            } else {
+                document.getElementById(item).classList.add("back");
+                document.getElementById(item).classList.remove("front");
+            }
         });
     }
 
     return (
         <main>
             <div className='login_tab_wrap'>
-                <div id="tabMember" className='front' onClick = {() => loginTabClick()}>회원</div>
-                <div id="tabNonMember" className='back' onClick = {() => loginTabClick()}>비회원</div>
+                <div id="tabMember" className='front' onClick={() => loginTabClick('tabMember')}>회원</div>
+                <div id="tabNonMember" className='back' onClick={() => loginTabClick('tabNonMember')}>비회원</div>
             </div>
         </main>
     );
